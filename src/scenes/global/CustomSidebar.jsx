@@ -17,13 +17,14 @@ import TimelineOutlinedIcon from '@mui/icons-material/TimelineOutlined'
 import MenuOutlined from '@mui/icons-material/MenuOutlined'
 import MapOutlinedIcon from '@mui/icons-material/MapOutlined'
 
+
 const Item = ({title, to, icon, selected, setSelected}) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
     <MenuItem 
       active={selected === title} 
-      style={{color: colors.grey[100]}} 
+      style={{color: colors.grey[100]}}
       onClick={() => setSelected(title)}
       icon={icon}
     >
@@ -62,6 +63,9 @@ function CustomSidebar() {
         },
         '& .pro-menu-item.active': {
           color: '#6870fa !important'
+        },
+        '.ps-menu-button:hover': {
+          backgroundColor: `${colors.primary[300]} !important`
         }
       }}
     >
@@ -136,6 +140,12 @@ function CustomSidebar() {
                 selected={selected}
                 setSelected={setSelected}
               />
+
+              <Typography
+                variant='h6'
+                color={colors.grey[300]}
+                sx={{m: '15px 0 5px 20px'}}
+              >Data</Typography>
               <Item 
                 title='Manage Team'
                 to='/team'
@@ -157,6 +167,12 @@ function CustomSidebar() {
                 selected={selected}
                 setSelected={setSelected}
               />
+
+              <Typography
+                variant='h6'
+                color={colors.grey[300]}
+                sx={{m: '15px 0 5px 20px'}}
+              >Pages</Typography>
               <Item 
                 title='Profile Form'
                 to='/form'
@@ -178,6 +194,11 @@ function CustomSidebar() {
                 selected={selected}
                 setSelected={setSelected}
               />
+              <Typography
+                variant='h6'
+                color={colors.grey[300]}
+                sx={{m: '15px 0 5px 20px'}}
+              >Charts</Typography>
               <Item 
                 title='Bar Chart'
                 to='/bar'
