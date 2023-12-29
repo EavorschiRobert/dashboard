@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import {Sidebar, Menu, MenuItem} from "react-pro-sidebar"
 import {Box, IconButton, Typography, useTheme} from '@mui/material'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { tokens } from '../../theme'
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined'
 import PeopleOutlinedIcon from '@mui/icons-material/PeopleOutlined'
@@ -25,11 +25,13 @@ const Item = ({title, to, icon, selected, setSelected}) => {
     <MenuItem 
       active={selected === title} 
       style={{color: colors.grey[100]}}
-      onClick={() => setSelected(title)}
+      onClick={() => {
+        setSelected(title)}}
       icon={icon}
     >
-      <Typography>{title}</Typography>
-      <Link to={to}/>
+      <Link to={to} style={{textDecoration: 'none', color: colors.grey[100]}}>
+        <Typography>{title}</Typography>
+      </Link>
     </MenuItem>
   )
 }
