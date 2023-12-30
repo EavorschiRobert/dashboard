@@ -5,11 +5,15 @@ body,
 #root,
 .app,
 .content {
-  height: 100%;
   width: 100%;
   font-family: 'Source Sans 3', sans-serif;
 }
-
+body{
+  width: 100%;
+}
+.MuiBox-root .css-0{
+  margin-right: 8%;
+}
 .app  {
   display: flex;
   position: relative;

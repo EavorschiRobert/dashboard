@@ -5,6 +5,7 @@ import {Routes, Route} from "react-router-dom"
 import Dashboard from "./scenes/dashboard";
 import CustomSidebar from "./scenes/global/CustomSidebar"
 import Team from "./scenes/team";
+import Contacts from "./scenes/contacts";
 /*
 import Team from "./scenes/global/team";
 import Invoices from "./scenes/global/invoices";
@@ -31,8 +32,8 @@ function App() {
               <Route exact path="/" element={<Dashboard/>}/>
               <Route exact path="/team" element={<Team/>}/>
               <Route exact path="/dashboard" element={<Dashboard/>}/>
-              {/*
               <Route path="/contacts" element={<Contacts/>}/>
+              {/*
               <Route path="/invoices" element={<Invoices/>}/>
               <Route path="/form" element={<Form/>}/>
               <Route path="/bar" element={<Bar/>}/>

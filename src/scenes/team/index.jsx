@@ -58,7 +58,7 @@ const Team = () => {
                     {access === 'admin' && <AdminPanelSettingsOutlinedIcon/>}
                     {access === 'manager' && <SecurityOutlinedIcon/>}
                     {access === 'user' && <LockOpenOutlinedIcon/>}
-                    <Typography color={colors.grey[100]} sx={{ml: '6px'}}>
+                    <Typography color={colors.grey[100]} sx={{ml: '5px'}}>
                         {access}
                     </Typography>
                 </Box>
@@ -70,7 +70,28 @@ const Team = () => {
     <Box m='20px'>
         <Header title="TEAM" subtitle="Managing the Team Members"></Header>
 
-        <Box m='40px 0 0 0' height='75vh'>
+        <Box m='40px 0 0 0' height='75vh' sx={{
+          "& .MuiDataGrid-root": {
+            border: 'none'
+          },
+          "& .MuiDataGrid-cell": {
+            borderBottom: 'none'
+          },
+          '& .name-column--cell': {
+            color: colors.greenAccent[300]
+          },
+          '& .MuiDataGrid-columnHeaders': {
+            backgroundColor: colors.blueAccent[700],
+            borderBottom: 'none'
+          },
+          '& .MuiDataGrid-virtualScroller': {
+            bacgroundColor: colors.primary[400]
+          },
+          '& .MuiDataGrid-footerContainer': {
+            borderTop: 'none',
+            backgroundColor:  colors.blueAccent[700]
+          }
+        }}>
             <DataGrid
                 rows={mockDataTeam} //dati
                 columns={columns} //dati delle colonne
