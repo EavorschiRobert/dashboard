@@ -7,17 +7,6 @@ import Header from "../../components/Header"
 import { useTheme } from "@mui/material"
 import './index.css'
 
-function CustomToolbar() {
-    return (
-      <GridToolbarContainer>
-        <GridToolbarColumnsButton />
-        <GridToolbarFilterButton />
-        <GridToolbarDensitySelector />
-        <GridToolbarExport />
-      </GridToolbarContainer>
-    );
-  }
-
 const Contacts = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);

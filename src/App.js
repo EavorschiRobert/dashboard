@@ -34,6 +34,7 @@ function App() {
               <Route exact path="/dashboard" element={<Dashboard/>}/>
               <Route path="/contacts" element={<Contacts/>}/>
               {/*
+              PROVA MERGE
               <Route path="/invoices" element={<Invoices/>}/>
               <Route path="/form" element={<Form/>}/>
               <Route path="/bar" element={<Bar/>}/>
