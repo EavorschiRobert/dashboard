@@ -13,6 +13,7 @@ import FAQ from "./scenes/faq";
 import Bar from "./scenes/bar";
 import Pie from "./scenes/pie";
 import Line from "./scenes/line";
+import Geography from "./scenes/geography";
 /*
 import Team from "./scenes/global/team";
 import Invoices from "./scenes/global/invoices";
@@ -47,14 +48,7 @@ function App() {
               <Route path="/bar" element={<Bar/>}/>
               <Route path="/pie" element={<Pie/>}/>
               <Route path="/line" element={<Line/>}/>
-              {/*
-              
-              
-              
-              
               <Route path="/Geography" element={<Geography/>}/>
-
-              */}
             </Routes>
           </main>
         </div>
